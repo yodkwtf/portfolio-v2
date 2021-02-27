@@ -21,11 +21,15 @@
     <header id="home">
       <!-- NAVBAR -->
       <nav id="nav">
-        <div class="nav-center">
+        <div class="nav-center section-center">
           <!-- nav-header -->
           <div class="nav-header">
-            <img src="./images/logo.png" alt="Logo" class="nav-logo" />
-            <button class="nav-btn"><i class="fas fa-bars"></i></button>
+            <a href="#home" class="scroll-link"
+              ><img src="./images/logo.png" alt="Logo" class="nav-logo"
+            /></a>
+            <button class="nav-btn">
+              <i class="fas fa-chevron-circle-down"></i>
+            </button>
           </div>
           <!-- nav-links -->
           <ul class="nav-links">
@@ -48,9 +52,9 @@
 
       <!-- HERO -->
       <div class="banner">
-        <div class="banner-container">
+        <div class="banner-container section-center">
           <article class="hero-info">
-            <h1>hey, i'm <span>durgesh</span></h1>
+            <h1>hey, i'm <span id="my-name">durgesh!</span></h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptates deleniti, error unde aperiam perferendis blanditiis sed
@@ -58,14 +62,16 @@
             </p>
             <div class="hero-btn-container">
               <a href="mailto:48durgesh.kumar@gmail.com" class="btn hero-btn"
-                >work with me</a
-              >
-              <a href="#contact" class="btn hero-btn scroll-link">follow me</a>
+                >talk to me <i class="fas fa-envelope"></i>
+              </a>
+              <a href="#contact" class="btn hero-btn scroll-link"
+                >follow me <i class="fas fa-thumbs-up"></i
+              ></a>
             </div>
           </article>
           <article class="hero-img">
             <img
-              src="./images/hero-image.jpg"
+              src="./images/hero/hero-image.svg"
               alt="Hero-Image"
               class="hero-image"
             />
@@ -78,8 +84,45 @@
     <!-- ABOUT -->
     <section id="about" class="section about">
       <div class="section-title">
-        <span>about</span> me
+        <h2><span>about</span> me</h2>
         <div class="underline"></div>
+      </div>
+
+      <div class="section-center about-center">
+        <!-- about-img -->
+        <article class="about-img">
+          <!-- small image -->
+          <div class="about-img-small">
+            <img
+              src="./images/about/about-image-small.jpg"
+              alt="about-image"
+              class="about-image-small"
+            />
+          </div>
+          <!-- big image -->
+          <div class="about-img-big">
+            <img
+              src="./images/about/about-image.jpg"
+              alt="about-image"
+              class="about-image-big"
+            />
+          </div>
+        </article>
+        <!-- about-info -->
+        <article class="about-info">
+          <h4>front-end developer</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor
+            suscipit incidunt, necessitatibus, amet illum laudantium veniam
+            ipsum ab, sunt ducimus quis enim minima assumenda quod repellendus
+            nostrum omnis quia.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+            dolorum, voluptatem saepe optio nostrum cupiditate impedit sequi
+            nihil quam voluptatum.
+          </p>
+        </article>
       </div>
     </section>
     <!-- END OF ABOUT -->
@@ -88,12 +131,110 @@
     <!-- END OF PROJECTS -->
 
     <!-- SKILLS -->
+    <section class="section skills" id="skills">
+      <div class="section-title">
+        <h2><span>tools</span> i work with</h2>
+        <div class="underline"></div>
+      </div>
+
+      <div class="skills-center section-center">
+        <!-- single skill -->
+        <article class="skill">
+          <img src="./images/skills/html.png" alt="html" class="skill-image" />
+          <h4 class="skill-title">HTML</h4>
+        </article>
+        <!-- end of single skill -->
+
+        <!-- single skill -->
+        <article class="skill">
+          <img src="./images/skills/css.png" alt="css" class="skill-image" />
+          <h4 class="skill-title">CSS</h4>
+        </article>
+        <!-- end of single skill -->
+
+        <!-- single skill -->
+        <article class="skill">
+          <img
+            src="./images/skills/bootstrap.png"
+            alt="bootstrap"
+            class="skill-image"
+          />
+          <h4 class="skill-title">Bootstrap</h4>
+        </article>
+        <!-- end of single skill -->
+
+        <!-- single skill -->
+        <article class="skill">
+          <img
+            src="./images/skills/javascript.png"
+            alt="javascript"
+            class="skill-image"
+          />
+          <h4 class="skill-title">Javascript</h4>
+        </article>
+        <!-- end of single skill -->
+
+        <!-- single skill -->
+        <article class="skill">
+          <img
+            src="./images/skills/jquery.png"
+            alt="j1uery"
+            class="skill-image"
+          />
+          <h4 class="skill-title">jQuery</h4>
+        </article>
+        <!-- end of single skill -->
+
+        <!-- single skill -->
+        <article class="skill">
+          <img
+            src="./images/skills/react.jpg"
+            alt="reactJS"
+            class="skill-image"
+          />
+          <h4 class="skill-title">React JS</h4>
+        </article>
+        <!-- end of single skill -->
+
+        <!-- single skill -->
+        <article class="skill">
+          <img
+            src="./images/skills/github.png"
+            alt="github"
+            class="skill-image"
+          />
+          <h4 class="skill-title">GitHub</h4>
+        </article>
+        <!-- end of single skill -->
+
+        <!-- single skill -->
+        <article class="skill">
+          <img
+            src="./images/skills/netlify.png"
+            alt="netlify"
+            class="skill-image"
+          />
+          <h4 class="skill-title">Netlify Functions</h4>
+        </article>
+        <!-- end of single skill -->
+      </div>
+    </section>
     <!-- END OF SKILLS -->
 
     <!-- CONTACT -->
     <!-- END OF CONTACT -->
 
     <!-- FOOTER -->
+    <footer id="footer" class="footer">
+      <div class="section-center">
+        <a href="#home" class="scroll-link"
+          ><img src="./images/logo.png" alt="Logo" class="nav-logo footer-logo"
+        /></a>
+        <p class="footer-text">
+          copyright &copy; <span id="date">2021</span>. all rights reserved
+        </p>
+      </div>
+    </footer>
     <!-- END OF FOOTER -->
 
     <!-- javascript -->
