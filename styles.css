@@ -213,6 +213,7 @@ p {
   margin-bottom: 4rem;
   text-align: center;
   text-transform: capitalize;
+  padding: 0 1rem;
 }
 .section-title span {
   font-weight: bolder;
@@ -374,7 +375,7 @@ SIDEBAR
 }
 .sidebar-link {
   text-transform: uppercase;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   font-size: 1.25rem;
   letter-spacing: 3px;
   display: block;
@@ -390,7 +391,7 @@ SIDEBAR
   border-left: 4px solid var(--clr-primary);
 }
 .sidebar-icons {
-  margin: 3rem auto;
+  margin: 2.5rem auto;
   text-align: center;
   padding: 0 2rem;
 }
@@ -411,7 +412,7 @@ SIDEBAR
   display: block;
   color: var(--clr-secondary);
   font-size: 1.5rem;
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
   letter-spacing: 2px;
 }
 .sidebar-icons .social-icon:hover {
