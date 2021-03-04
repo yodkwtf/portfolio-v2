@@ -53,3 +53,17 @@ scrollLinks.forEach((link) => {
     sidebar.classList.remove('show-sidebar');
   });
 });
+
+// ********** typewriter ************
+
+// let i = 0;
+// const myName = 'Durgesh';
+// window.addEventListener('DOMContentLoaded', typeWriter);
+
+// function typeWriter() {
+//   if (i < myName.length) {
+//     document.getElementById('my-name').innerHTML += myName.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, 500);
+//   }
+// }

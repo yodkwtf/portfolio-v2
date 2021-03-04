@@ -2,9 +2,8 @@
 #### TO DO"S
 
 * dark mode
-* correct linkedin link
-* replace dummy text in hero, about
-* update projects
+* replace dummy text in hero, about and projects
+* update project and contacts page
 
 */
 
@@ -299,9 +298,12 @@ nav {
   text-shadow: 1px 2px 2px var(--clr-light);
   transition: var(--transition);
   letter-spacing: 2px;
+  padding: 0.1rem 0;
+  border-bottom: 2px solid transparent;
 }
 .nav-link:hover {
   color: var(--clr-secondary);
+  border-color: var(--clr-secondary);
 }
 
 @media screen and (min-width: 792px) {
@@ -454,12 +456,16 @@ header {
   display: none;
   width: 22rem;
 }
+.hero-info {
+  text-align: center;
+}
 .hero-info h1 {
   text-shadow: 1px 1px 1px var(--clr-primary);
   font-family: var(--ff-secondary);
 }
 .hero-info p {
   margin: 1.5rem 0;
+  margin-top: 0.5rem;
 }
 .hero-btn-container {
   display: grid;
@@ -467,28 +473,84 @@ header {
   column-gap: 2rem;
   text-align: center;
   max-width: 30rem;
+  margin: 0 auto;
 }
 .hero-btn {
   align-self: center;
   border: 2px solid transparent;
+  transition: all 0.5s ease-out;
 }
 .hero-btn:last-child {
   background: var(--clr-light);
   color: var(--clr-primary);
   border-color: var(--clr-primary);
 }
+.hero-btn:hover {
+  background: var(--clr-light);
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+.hero-btn:last-child:hover {
+  background: var(--clr-primary-gradient);
+  color: var(--clr-white);
+  border-color: transparent;
+}
+
+#my-name {
+  margin: 0 auto;
+  width: 360px;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  line-height: 1.5;
+  animation: type 2.5s steps(20, end), blink 0.5s step-end infinite alternate;
+  animation-fill-mode: forwards;
+}
+@media screen and (min-width: 768px) {
+  #my-name {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 395px) {
+  #my-name {
+    font-size: 2.25rem;
+    width: 300px;
+  }
+}
+/* text animation */
+@keyframes type {
+  0% {
+    width: 0;
+    border-right: 3px solid var(--clr-dark);
+  }
+  1% {
+    opacity: 1;
+  }
+  99% {
+    border-right: 3px solid var(--clr-dark);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
 @media screen and (min-width: 976px) {
   .banner-container {
     grid-template-columns: 1fr auto;
-    gap: 5rem;
+    gap: 7rem;
     align-items: center;
   }
   .hero-img {
     display: block;
   }
 }
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 495px) {
   .hero-btn-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -611,7 +673,7 @@ PROJECTS
   margin-bottom: 0;
 }
 .project {
-  background: var(--clr-light);
+  background: var(--clr-light-2);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
   transition: var(--transition);
@@ -718,7 +780,7 @@ PROJECTS
     position: relative;
   }
   .project-image {
-    height: 20rem;
+    height: 18rem;
     border-radius: var(--radius);
     position: relative;
     box-shadow: var(--light-shadow);
@@ -793,6 +855,7 @@ SKILLS
 .skill-image {
   object-fit: contain;
   width: 180px;
+  /* width: 100%; */
   height: 180px;
   transition: var(--long-transition);
 }
@@ -957,4 +1020,20 @@ FOOTER
   text-transform: capitalize;
   line-height: 1;
   margin-bottom: 0;
+}
+
+/* 
+#####################
+PAGES
+#####################
+*/
+main {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+.projects-page-center,
+.contact-page-center {
+  text-align: center;
+  margin: 0 auto;
 }
