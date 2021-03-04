@@ -235,7 +235,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-light-2);
+  background: var(--clr-light);
   box-shadow: var(--light-shadow);
 }
 .nav-center {
@@ -445,9 +445,10 @@ header {
     url(./images/hero/hero-bcg-light.png) center repeat fixed;
 }
 .banner {
-  min-height: calc(100vh - 88.03px);
+  min-height: calc(100vh - 74px);
   display: grid;
   place-items: center;
+  padding-bottom: 5rem;
 }
 .banner-container {
   display: grid;
@@ -549,6 +550,13 @@ header {
   .hero-img {
     display: block;
   }
+  .hero-info {
+    text-align: left;
+  }
+  .hero-btn-container,
+  #my-name {
+    margin: 0;
+  }
 }
 @media screen and (max-width: 495px) {
   .hero-btn-container {
@@ -594,6 +602,24 @@ ABOUT
   padding: 0.4rem 1.25rem;
   border-radius: 0.25rem;
   display: block;
+}
+#more-text {
+  display: none;
+}
+#toggle-text {
+  background: transparent;
+  outline: none;
+  text-transform: capitalize;
+  color: rgb(121, 187, 241);
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  #toggle-text {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
