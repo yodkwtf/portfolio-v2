@@ -6,6 +6,9 @@
 
 */
 
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Roboto&family=Source+Sans+Pro:ital@1&display=swap');
+
 /*
 ===============
 Variables
@@ -50,7 +53,7 @@ Variables
 
   /* font families */
   --ff-primary: 'Roboto', sans-serif;
-  --ff-secondary: 'Akaya Telivigala', cursive;
+  --ff-secondary: 'Source Sans Pro', sans-serif;
   /* transitions */
   --transition: all 0.3s linear;
   --long-transition: all 1s ease;
@@ -444,10 +447,10 @@ header {
     url(./images/hero/hero-bcg-light.png) center repeat fixed;
 }
 .banner {
-  min-height: calc(100vh - 74px);
+  min-height: calc(100vh - 73.6px);
   display: grid;
   place-items: center;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 .banner-container {
   display: grid;
@@ -462,6 +465,10 @@ header {
 .hero-info h1 {
   text-shadow: 1px 1px 1px var(--clr-primary);
   font-family: var(--ff-secondary);
+}
+#my-name span {
+  color: var(--clr-primary);
+  text-shadow: 1px 1px 1px var(--clr-dark);
 }
 .hero-info p {
   margin: 1.5rem 0;
@@ -498,22 +505,25 @@ header {
 
 #my-name {
   margin: 0 auto;
-  width: 360px;
+  width: 380px;
   white-space: nowrap;
-  overflow: hidden;
   opacity: 0;
   line-height: 1.5;
-  animation: type 2.5s steps(20, end), blink 0.5s step-end infinite alternate;
+  animation: type 4s steps(20, end) infinite alternate,
+    blink 0.5s step-end infinite alternate;
   animation-fill-mode: forwards;
+  border-right: 3px solid var(--clr-dark);
+  overflow: hidden;
 }
+
 @media screen and (min-width: 768px) {
   #my-name {
-    width: 500px;
+    width: 520px;
   }
 }
 @media screen and (max-width: 395px) {
   #my-name {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
     width: 300px;
   }
 }
@@ -521,13 +531,12 @@ header {
 @keyframes type {
   0% {
     width: 0;
-    border-right: 3px solid var(--clr-dark);
   }
   1% {
     opacity: 1;
   }
   99% {
-    border-right: 3px solid var(--clr-dark);
+    /* border-right: 3px solid var(--clr-dark); */
   }
   100% {
     opacity: 1;
@@ -595,11 +604,11 @@ ABOUT
 }
 .about-info h4 {
   text-align: center;
-  background: var(--clr-primary-gradient);
-  color: var(--clr-white);
+  background: var(--clr-dark);
+  color: var(--clr-light);
   margin-bottom: 0 auto 1.5rem;
-  padding: 0.4rem 1.25rem;
-  border-radius: 0.25rem;
+  padding: 0.3rem 1.25rem;
+  border-radius: 2px;
   display: block;
 }
 #more-text {
@@ -880,7 +889,6 @@ SKILLS
 .skill-image {
   object-fit: contain;
   width: 180px;
-  /* width: 100%; */
   height: 180px;
   transition: var(--long-transition);
 }
@@ -890,12 +898,11 @@ SKILLS
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--clr-light);
-  background: var(--clr-primary-gradient);
+  background: var(--clr-dark);
   padding: 0.5rem;
-  border-radius: 1rem;
   text-align: center;
   transition: var(--long-transition);
-  opacity: 0;
+  opacity: 0.01;
 }
 .skill:hover .skill-image {
   opacity: 0.7;
@@ -938,6 +945,7 @@ CONTACT
 .contact-info h2 {
   text-transform: uppercase;
   text-shadow: 2px 2px 2px var(--clr-white);
+  font-family: var(--ff-secondary);
 }
 
 .social-icons {
