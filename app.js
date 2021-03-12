@@ -77,3 +77,50 @@ toggleTextBtn.addEventListener('click', (e) => {
     toggleTextBtn.innerHTML = 'show less <i class="fas fa-angle-up"></i>';
   }
 });
+
+// ********** dark mode ************
+
+// set default theme
+let theme;
+if (localStorage.getItem('theme')) {
+  theme = localStorage.getItem('theme');
+} else {
+  theme = 'light';
+}
+
+// change toggle btn content FUNCTION
+const changeToggleBtn = () => {
+  document
+    .querySelectorAll('.toggle-theme')
+    .forEach(
+      (btn) =>
+        (btn.innerHTML = `${
+          theme === 'light'
+            ? '<i class="fas fa-toggle-off"></i>'
+            : '<i class="fas fa-toggle-on"></i>'
+        }`)
+    );
+};
+
+// switch theme FUNCTION
+const switchTheme = () => {
+  if (theme === 'light') {
+    theme = 'dark';
+  } else {
+    theme = 'light';
+  }
+  localStorage.setItem('theme', theme);
+  document.documentElement.className = theme;
+  changeToggleBtn();
+};
+
+// updating theme on initial render
+window.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.className = theme;
+  changeToggleBtn();
+});
+
+// updating theme on clicking the toggle btn
+document.querySelectorAll('.toggle-theme').forEach((btn) => {
+  btn.addEventListener('click', switchTheme);
+});
