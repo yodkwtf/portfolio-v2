@@ -55,16 +55,16 @@ scrollLinks.forEach((link) => {
 });
 
 // ********** set age ************
-const age = document.getElementById('age');
+// const age = document.getElementById('age');
 // magic number: 31557600000 is 24 * 3600 * 365.25 * 1000 Which is the length of a year, the length of a year is 365 days and 6 hours which is 0.25 day. In the end i floor the result which gives us the final age.
-age.textContent = Math.floor(
-  (new Date() - new Date('2001-08-04').getTime()) / 3.15576e10
-);
+// age.textContent = Math.floor(
+//   (new Date() - new Date('2001-08-04').getTime()) / 3.15576e10
+// );
 
 // ********** read more ************
 const dots = document.getElementById('dots');
 const moreText = document.getElementById('more-text');
-const toggleTextBtn = document.getElementById('toggle-text');
+const toggleTextBtn = document.getElementById('toggle-text-btn');
 
 toggleTextBtn.addEventListener('click', (e) => {
   if (dots.style.display === 'none') {
